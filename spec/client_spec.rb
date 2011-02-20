@@ -2,7 +2,7 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe "Client" do
   before do
-    SimpleGeo::Client.set_credentials 'token', 'secret'
+    SimpleGeo::Client.set_credentials 'WCPqWp5kVfVkbgW6SqsyKtwy2xMjMEZA', 'LjvGwmU4HfVNRgzmcYK8ryBtFK3nQZB7'
   end
 
   context "getting a record" do
@@ -1192,6 +1192,13 @@ describe "Client" do
       ]
     end
   end
+
+  context "getting categories" do 
+    it "should return a list of supported categories" do 
+      categories = SimpleGeo::Client.get_categories
+      categories.should_not be_nil
+    end 
+  end 
 
   # this API call seems to always return a 404
   # context "getting boundary info by id" do

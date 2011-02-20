@@ -10,10 +10,10 @@ Rspec.configure do |config|
 
   config.extend VCR::RSpec::Macros
 
-  VCR.config do |c|
-    c.cassette_library_dir = 'vcr/cassettes'
-    c.stub_with :fakeweb
-  end
+#  VCR.config do |c|
+    #c.cassette_library_dir = 'vcr/cassettes'
+   # c.stub_with :fakeweb
+  #end
 
 end
 

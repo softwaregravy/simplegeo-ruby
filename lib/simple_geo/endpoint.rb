@@ -118,6 +118,10 @@ module SimpleGeo
       def endpoint_url(path, version = API_VERSION)
         [REALM, version, path].join('/')
       end
+
+      def categories 
+        endpoint_url "features/categories.json"
+      end 
     end
 
   end

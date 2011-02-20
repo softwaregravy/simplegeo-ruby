@@ -171,6 +171,12 @@ module SimpleGeo
         end
       end
 
+      def get_categories 
+        geojson_hash = get Endpoint.categories
+        HashUtils.recursively_symbolize_keys geojson_hash
+      end 
+
+
       def get_overlaps(south, west, north, east, options=nil)
         warn "[DEPRECATION] `SimpleGeo::Client.get_overlaps` is deprecated."
         info = get Endpoint.overlaps(south, west, north, east), options
@@ -215,6 +221,7 @@ module SimpleGeo
         @@connection.put endpoint, data
       end
     end
+
 
   end
 
