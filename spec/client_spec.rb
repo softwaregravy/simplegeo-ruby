@@ -2,7 +2,7 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe "Client" do
   before do
-    SimpleGeo::Client.set_credentials 'WCPqWp5kVfVkbgW6SqsyKtwy2xMjMEZA', 'LjvGwmU4HfVNRgzmcYK8ryBtFK3nQZB7'
+    SimpleGeo::Client.set_credentials ENV['SIMPLEGEO_KEY'], ENV['SIMPLEGEO_SECRET']
   end
 
   context "getting a record" do
