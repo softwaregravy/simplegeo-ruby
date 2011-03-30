@@ -16,7 +16,7 @@ module SimpleGeo
       @lon = options[:lon]
       @created = options[:created]
       @properties = options[:properties]
-      @distance = options[:distance]
+      @distance = options[:distance] if options.has_key?(:distance)
     end
 
     def to_hash
