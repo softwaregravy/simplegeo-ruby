@@ -29,7 +29,6 @@ Gem::Specification.new do |s|
     "lib/simple_geo/hash_utils.rb",
     "lib/simple_geo/record.rb",
     "lib/simplegeo.rb",
-    "simplegeo-0.2.1.gem",
     "simplegeo.gemspec",
     "spec/cassettes/feature_valid.yml",
     "spec/cassettes/get_categories.yml",
