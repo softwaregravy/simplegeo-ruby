@@ -1,6 +1,6 @@
 module SimpleGeo
   class Record
-    attr_accessor :layer, :id, :lat, :lon, :type, :created, :properties
+    attr_accessor :layer, :id, :lat, :lon, :type, :created, :properties, :distance
 
     def initialize(options={})
       options = {
@@ -16,6 +16,7 @@ module SimpleGeo
       @lon = options[:lon]
       @created = options[:created]
       @properties = options[:properties]
+      @distance = options[:distance]
     end
 
     def to_hash
@@ -47,6 +48,7 @@ module SimpleGeo
         :type => json_hash['properties'].delete('type'),
         :lat => json_hash['geometry']['coordinates'][1],
         :lon => json_hash['geometry']['coordinates'][0],
+        :distance => json_hash.has_key?('distance') ? json_hash['distance'] : 0,
         :properties => HashUtils.recursively_symbolize_keys(json_hash['properties'])
       )
     end

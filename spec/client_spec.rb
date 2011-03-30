@@ -19,6 +19,7 @@ describe "Client" do
         record.id.should == '5373629'
         record.type.should == 'place'
         record.layer.should == 'com.simplegeo.global.geonames'
+        record.distance.should == 0
         record.lat.should == 37.759650000000001
         record.lon.should == -122.42608
         record.properties.should == {
