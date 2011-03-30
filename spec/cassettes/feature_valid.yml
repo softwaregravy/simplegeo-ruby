@@ -1,0 +1,79 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.simplegeo.com:80/1.0/features/SG_4ahRExz3iKlEjoeSZk7b9G_40.728714_-73.992082.json
+    body: 
+    headers: 
+      user-agent: 
+      - SimpleGeo Ruby Client v0.2.1 (OAuth gem v0.4.4)
+      authorization: 
+      - OAuth oauth_nonce="Fdw7qV1qq4vvbgWXQRM9rgeLhzPrMw46O5kpPWNmAg", oauth_signature="VhxGghIsY60oOmnNe6TxyytL7q8%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1301453620", oauth_version="1.0"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json
+      date: 
+      - Wed, 30 Mar 2011 02:53:41 GMT
+      server: 
+      - gate/0.1.190
+      vary: 
+      - Accept-Encoding
+      x-request-id: 
+      - Ihw3tsEVLMIVtqRN3Es/wu
+      x-response-time: 
+      - "84"
+      x-sg-host: 
+      - production-api-456b272f
+      x-timing-stats: 
+      - "{\"PushPin\":21,\"Places\":83}"
+      content-length: 
+      - "587"
+      connection: 
+      - Close
+    body: |
+      {"geometry":{"type":"Point","coordinates":[-73.992082,40.728714]},"type":"Feature","id":"SG_4ahRExz3iKlEjoeSZk7b9G_40.728714_-73.992082@1294177022","properties":{"province":"NY","city":"New York","name":"The Public Theater","tags":["theatrical","company","production"],"country":"US","phone":"+1 212 539 8500","href":"http://api.simplegeo.com/1.0/features/SG_4ahRExz3iKlEjoeSZk7b9G_40.728714_-73.992082@1294177022.json","address":"425 Lafayette St","owner":"simplegeo","postcode":"10003","classifiers":[{"category":"Arts & Performance","type":"Entertainment","subcategory":"Theater"}]}}
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.simplegeo.com:80/1.0/features/badly-formed-handle.json
+    body: 
+    headers: 
+      user-agent: 
+      - SimpleGeo Ruby Client v0.2.1 (OAuth gem v0.4.4)
+      authorization: 
+      - OAuth oauth_nonce="04vBI5OH4sNwCfh646otcuNU33oU7iR7RWuyDsbwmg", oauth_signature="PsLrZtceqK0s9aLb%2FzKhjhughnc%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1301453620", oauth_version="1.0"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 400
+      message: Bad Request
+    headers: 
+      content-type: 
+      - application/json
+      date: 
+      - Wed, 30 Mar 2011 02:53:40 GMT
+      server: 
+      - gate/0.1.190
+      x-request-id: 
+      - BO+mTyvAfBjYG1PWOmRghB
+      x-response-time: 
+      - "1"
+      x-sg-host: 
+      - production-api-a76a26cd
+      x-timing-stats: 
+      - "{}"
+      x-troll: 
+      - problem?
+      content-length: 
+      - "40"
+      connection: 
+      - Close
+    body: |
+      {"code":400,"message":"Invalid handle"}
+
+    http_version: "1.1"

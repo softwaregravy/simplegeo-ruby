@@ -10,10 +10,11 @@ Rspec.configure do |config|
 
   config.extend VCR::RSpec::Macros
 
-#  VCR.config do |c|
-    #c.cassette_library_dir = 'vcr/cassettes'
-   # c.stub_with :fakeweb
-  #end
+  VCR.config do |c|
+    c.stub_with :fakeweb
+    c.cassette_library_dir = 'spec/cassettes'
+    c.default_cassette_options = {:record => :new_episodes}
+  end
 
 end
 

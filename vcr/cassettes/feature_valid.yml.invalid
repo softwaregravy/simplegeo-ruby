@@ -1,0 +1,77 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.simplegeo.com:80/1.0/features/SG_4ahRExz3iKlEjoeSZk7b9G_40.728714_-73.992082.json
+    body: 
+    headers: 
+      user-agent: 
+      - SimpleGeo Ruby Client v0.1.0 (OAuth gem v0.4.4)
+      authorization: 
+      - OAuth oauth_consumer_key="", oauth_nonce="", oauth_signature="", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1296262263", oauth_version="1.0"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      content-type: 
+      - application/json
+      connection: 
+      - Close
+      date: 
+      - Sat, 29 Jan 2011 00:51:03 GMT
+      server: 
+      - gate/0.1.152
+      x-request-id: 
+      - Vxm4Fmw4Znnjdvz1/wB6o4
+      x-sg-host: 
+      - production-api-a76a26cd.ck.simplegeo.com
+      x-response-time: 
+      - "18"
+      content-length: 
+      - "587"
+      x-timing-stats: 
+      - "{\"auth\":0,\"PushPin\":6,\"Places\":16}"
+      vary: 
+      - Accept-Encoding
+    body: |
+      {"geometry":{"type":"Point","coordinates":[-73.992082,40.728714]},"type":"Feature","id":"SG_4ahRExz3iKlEjoeSZk7b9G_40.728714_-73.992082@1294177022","properties":{"province":"NY","city":"New York","name":"The Public Theater","tags":["theatrical","company","production"],"country":"US","phone":"+1 212 539 8500","href":"http://api.simplegeo.com/1.0/features/SG_4ahRExz3iKlEjoeSZk7b9G_40.728714_-73.992082@1294177022.json","address":"425 Lafayette St","owner":"simplegeo","postcode":"10003","classifiers":[{"category":"Arts & Performance","type":"Entertainment","subcategory":"Theater"}]}}
+
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://api.simplegeo.com:80/1.0/features/badly-formed-handle.json
+    body: 
+    headers: 
+      user-agent: 
+      - SimpleGeo Ruby Client v0.1.0 (OAuth gem v0.4.4)
+      authorization: 
+      - OAuth oauth_consumer_key="", oauth_nonce="", oauth_signature="%%3D", oauth_signature_method="HMAC-SHA1", oauth_timestamp="1296262328", oauth_version="1.0"
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 400
+      message: Bad Request
+    headers: 
+      connection: 
+      - Close
+      content-type: 
+      - application/json
+      x-sg-host: 
+      - production-api-a74b07cd.ck.simplegeo.com
+      x-request-id: 
+      - 4JsWdBDPWv0XiRrAsXY09o
+      server: 
+      - gate/0.1.152
+      date: 
+      - Sat, 29 Jan 2011 00:52:08 GMT
+      content-length: 
+      - "40"
+      x-response-time: 
+      - "3"
+      x-timing-stats: 
+      - "{\"auth\":3}"
+    body: |
+      {"code":400,"message":"Invalid handle"}
+
+    http_version: "1.1"
